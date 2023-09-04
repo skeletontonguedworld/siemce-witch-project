@@ -9,8 +9,16 @@ while true:
 
 echo "Dobru, więc LAS(t) jest naszym sklepikiem zielarskim teraz, jedziemy"
 
-var last = @["kwiatuszki z wygnania", "płatki na zbroję", "zmrożone kwiaty", "mięciutkie czarne gwiazdki", "nieskończona róża"]
-var twójplecaczek = @["apokaliptyczny folk"]
+type Last = enum
+        Zmrożone_kwiaty = 10
+        Mięciutkie_czarne_gwiazdki = 25
+        Kwiatuszki_z_wygnania = 50
+        Nieskończona_róża = 55
+        Płatki_na_zbroję = 60
+        Apokaliptyczny_folk = 666
+
+var last = @[Kwiatuszki_z_wygnania, Płatki_na_zbroję, Zmrożone_kwiaty, Mięciutkie_czarne_gwiazdki, Nieskończona_róża]
+var twójplecaczek = @[Apokaliptyczny_folk]
 var pinionszkim = 66
 
 while pinionszkim > 0:
