@@ -29,23 +29,23 @@ while pinionszkim > 0:
   var osobakupująca = readLine(stdin)
   if osobakupująca == "0":
     echo "Proszum, oto Twoje kwiatuszki z wygnania, proszum 50 złoteczka mje dać" 
-    pinionszkim -= 50 
+    pinionszkim -= Kwiatuszki_z_wygnania.int 
     twójplecaczek.add(last[0])
   if osobakupująca == "1":
     echo "Proszum, oto Twoje płatki na zbroję, proszum 60 złoteczka mje dać" 
-    pinionszkim -= 60 
+    pinionszkim -= Płatki_na_zbroję.int 
     twójplecaczek.add(last[1])
   if osobakupująca == "2":
-    echo "Proszum, oto Twoje zmrożone kwaity, proszum 10 złoteczka mje dać" 
-    pinionszkim -= 10 
+    echo "Proszum, oto Twoje zmrożone kwiaty, proszum 10 złoteczka mje dać" 
+    pinionszkim -= Zmrożone_kwiaty.int 
     twójplecaczek.add(last[2])
   if osobakupująca == "3":
     echo "Proszum, oto Twoje mięciutkie czarne gwiazdki, proszum 25 złoteczka mje dać" 
-    pinionszkim -= 25 
+    pinionszkim -= Mięciutkie_czarne_gwiazdki.int
     twójplecaczek.add(last[3])
   if  osobakupująca == "4":
     echo "Proszum, oto Twoja nieskończona róża, proszum 55 złoteczka mje dać" 
-    pinionszkim -= 55 
+    pinionszkim -= Nieskończona_róża.int 
     twójplecaczek.add(last[4])
   else:
     echo "A to wyjć stont, jak nix nie kupujesz, bo zajmujesz kolejkę, mam pięciu Wiedźmaków na Twoje miejsce" 
