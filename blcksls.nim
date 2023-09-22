@@ -36,7 +36,7 @@ while true:
       hp -= 21
       echo "Twoje zdrówko to teraz: " & $hp
 
-    of Piwniczne_Mokradła:
+    of Lokacje.Piwniczne_Mokradła:
       echo "Po roku mieszkania w Siemcach postanawiasz zejść do piwnicy i sprawdzić, czy ona w ogóle istnieje, bo nigdy w niej nie byłaś"
       echo "Zjeżdżasz windą, schodzisz kawałek po schodach i widzisz wodę stojącą w piwnicy, ZNÓW, pewnie po ostatnich deszczach, co robisz?"
       var piwniczak = readLine(stdin)
@@ -56,11 +56,12 @@ while true:
       else:
         echo "Sama nie wiesz, co robić, wracasz"
 
-    of Przedblocze:
+    of Lokacje.Przedblocze:
       echo "Postanawiasz wyjść z domu, wychodzisz z klatki, niestety na ławce siedzi sąsiadka, która zaczyna zagadywać"  
       echo "DZIOŁCHA, JO ŻECH CIĘ TU NIE WIDZIOŁA WCZECZEŚNIEJ! SKOMT JESTEŚ?" # nope, nadal nie umiem Śluskiego, nie będę nawet udawać XD
       echo "Musisz myśleć szybko, co kcesz zrobić, odejść i robić swoje, czy odpowiedzieć?"
       var przedblokarz = readLine(stdin)
+      
       if przedblokarz == "Spierdalaj" or przedblokarz.contains("odej"):
         echo "Uciekasz jak najszybciej, nie będziesz przecież rozmawiać ze starymi plotkarami"
         echo "Widzisz jednak, że stara kobieta mamrocze coś pod nosem i w momencie doznajesz dziwnego uczucia wiercenia w głowie i dreszczy"
