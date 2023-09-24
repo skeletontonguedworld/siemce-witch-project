@@ -36,21 +36,64 @@ while hp > 0:
   
   case jesteśtu:
 
-    of Lokacje.Balkon_Siemianowickch_Horrorów: # notki dla mnie: rozbudować walkę z macką, coś żeby się wincyj zdrowia traciło i nie była taka krótka
+    of Lokacje.Balkon_Siemianowickch_Horrorów: 
       echo "Pomimo dziwnych cieni na bloku, postanawiasz wyjść zapalić"
       sleep(2000)
       echo "Kiedy odpalasz papieroska, zauważasz gigantyczną mackę, która próbuje Ci go wyrwać"
       sleep(2000)
-      echo "Papiroski som drogie, więc nie uciekasz tylko próbujesz odgnonić mackę światłem z zapalniczki"
-      sleep(2000)
-      echo "Lekko przypalona macka się odsuwa, lecz niestety, udaje jej się zrobić Ci dwie wampirze ranki na łokciu"
-      sleep(2000)
-      echo "Odnosisz lekkie obrażenia"
-      hp -= 21
-      echo "Twoje zdrówko to teraz: " & $hp
+      echo "Co robisz? Uciekasz, czy próbujesz walczyć?"
+      var balkoniarz = readLine(stdin)
+      if balkoniarz.contains("wal"):
+        echo "Papiroski som drogie, więc nie uciekasz tylko próbujesz walczyć. Wybierz swoją broń!"
+        echo "Zapalniczka, Ręka, Kolce z balkonu"
+        var balkoniarz2 = readLine(stdin)
+        if balkoniarz2.contains("pal"):
+          echo "Próbujesz odgnonić mackę światłem z zapalniczki"
+          sleep(2000)
+          echo "Lekko przypalona macka się odsuwa, lecz niestety, udaje jej się zrobić Ci dwie wampirze ranki na łokciu"
+          sleep(2000)
+          echo "Odnosisz lekkie obrażenia"
+          hp -= 21
+          echo "Twoje zdrówko to teraz: " & $hp
+        elif balkoniarz2.contains("ęka"):
+          echo "Machasz ręką jak pojebion i próbujesz odgonić mackę. Nix Ci nie będzie przeszkadzać na Twoim balkonie"
+          echo "Nagle zauważasz przyjacielskiego pajunka, którego postanowiłaś kiedyś nie zabijać, patrzy na Ciebie swoimi wszystkimi oczami"
+          echo "Wygląda, jakby kciał Ci pomóc, to w końcu teraz WASZ balkon! Czy przyjmiesz jego pomoc?"
+          var balkoniarz3 = readLine(stdin)
+          if balkoniarz3.contains("ak"):
+            echo "Patrzysz się na pajunka i mówisz DAJESZ MALUTKI, ROZJEBIEMY TE MACKI"
+            echo "Pajunk macha odnóżami, jak się zgodził i atakujecie macki razem, pajunk wgryza się w jedną, Ty skopujesz drugą z kafelków"
+            echo "Siemianowicie Horrory nie sądziły, że zostaną pokonane siłą przyjaźni międzygatunkowej, ale chyba się udało, nie widzisz ich w pobliżu"
+            echo "Zbijasz piątkę z pajunkiem, czujesz się fantastycznie i dopalasz spokojnie fajeczkę"
+            hp += 21
+            echo "Od razu lepij. Twoje zdrówko to teraz: " & $hp
+            echo "Przypomniasz sobie, że palenie nie jest jednak zdrowe i nie powinnaś się tak czuć"
+            hp -= 10
+            eq.add("przyjaźń międzygatunkowa")
+          elif balkoniarz3.contains("ie"):
+            echo "A po co Ci pomoc jakiegoś pajunka, napierdalasz sama macki łapami, ale nie przynosi to wielkiego efektu"
+            echo "Macka uderza Cię w głowę, ostatkiem sił wracasz do mieszkania"
+            hp -= 66
+            echo "Leżysz chwilę na podłodze, nie masz siły, nie wiesz czemu, ale na ścianie wyświetla Ci się napis TWOJE ZDROWIE DRASTYCZNIE SPADA, WYNOSI TERAZ: " & $hp
+          else:
+            echo "Dobra, to nie ma sensu, jak cały ten kod"
+        elif balkoniarz2.contains("kolc"):
+          echo "Próbujesz wyrwać plastikowe kolce na gołębie z barierek, idzie opornie, ale się udaje, uderzasz, w mackę wbija się plastik" 
+          echo "Słyszysz śmiech, nie wiesz czy Horroru, czy tylko w Twojej głowie, macka w momencie oddaje Ci kolcami"
+          if hp > 50:
+            echo "Udaje Ci się zrobić unik, chociaż macka lekko zachacza o Twoją głowę, możliwe, że masz jakąs rankę, dotykasz włósów i czujesz na niej trochę krwi"
+            hp -= 10
+          else:
+            echo "Niestety nie udało Ci się zrobić uniku w czas, dostajesz kolcami w głowę, ciesz się, że tą gładką stroną, chociaż uderzenie nadal boli"
+            hp -= 70
+        else: 
+          echo "Jak Ty nie kcesz walczyć, to po co walkę wybrałaś, hęęęęę?"    
+      else:
+        echo "Przerażona uciekasz, postanawiasz nie podejmować walki z Siemianowickimi Przedwiecznymi, bo to za potężny przeciwnik"  
+      
       echo "No nix, pora iść dalij"
 
-    of Lokacje.Piwniczne_Mokradła: #notki dla mnie: pododawać sporo sleepów, żeby się tak szybko tekst nie pojawiał
+    of Lokacje.Piwniczne_Mokradła: #notki dla mnie: pododawać sporo sleepów, żeby się tak szybko tekst nie pojawiał - to notka do całości w sumie XDDD
       echo "Po roku mieszkania w Siemcach postanawiasz zejść do piwnicy i sprawdzić, czy ona w ogóle istnieje, bo nigdy w niej nie byłaś"
       sleep(2000)
       echo "Zjeżdżasz windą, schodzisz kawałek po schodach i widzisz wodę stojącą w piwnicy, ZNÓW, pewnie po ostatnich deszczach, co robisz? Kcesz tam iść czy kurwować na SSM?"
