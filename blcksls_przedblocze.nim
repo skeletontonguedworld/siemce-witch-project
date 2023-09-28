@@ -1,6 +1,8 @@
 import os
 import std/strutils
 import blcksls_zmienne
+import blcksls_piwnica
+import blcksls_domena
 
 proc blcksls_przedblocze*() =
 
@@ -21,6 +23,16 @@ proc blcksls_przedblocze*() =
     eq.add("klomtwam Michałkowic")
     for rzeczy2 in eq:
         echo rzeczy2
+    echo "Przechodząc koło śmietników, zauważasz małego szczura, przerażony zaczyna Cię obwąchiwać i wygląda, jakby Cię kciał dzieś zaprowadzić. Idziesz za nim?"
+    var przedblokarz2 = readLine(stdin)
+    if przedblokarz2.contains("ak"):
+      echo "Postanawiasz iść za szczurem, w końcu nie wygląda to na nix normalnego, a co Ci szkodzi"
+      sleep(3000)
+      echo "Szczur prowadzi Cię do piwnicy"
+      blcksls_piwnica()
+    else:
+      echo "Dobra, nigdzie nie idziesz, nie masz siły, wracasz do domu" 
+      blcksls_domena()
   elif przedblokarz.contains("odp"):
     echo "Opowiadasz kobiecie. Chociaż wypytuje strasznie, to starasz się być miła, jednak dość szybko kończysz rozmowę, bo nie masz czasu na pierdoły"
     sleep(3000)

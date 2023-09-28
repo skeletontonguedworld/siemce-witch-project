@@ -30,8 +30,8 @@ while hp > 0:
   
   case jesteśtu:
     of Lokacje.Balkon_Siemianowickch_Horrorów: blcksls_balkon()
-    of Lokacje.Piwniczne_Mokradła: blcksls_piwnica() #notki dla mnie: pododawać sporo sleepów, żeby się tak szybko tekst nie pojawiał - to notka do całości w sumie XDDD
-    of Lokacje.Przedblocze: blcksls_przedblocze() # notki dla mnie: rozbudować dialogi może trochę, ifów wincyj (?)
+    of Lokacje.Piwniczne_Mokradła: blcksls_piwnica() 
+    of Lokacje.Przedblocze: blcksls_przedblocze()
     of Lokacje.Domena_Kari: blcksls_domena()
       
 echo "Finalnie Twoje zdrówko wynosi: " & $hp & " a w Twoim ekwipuneczku jest: " 
