@@ -16,6 +16,7 @@ while hp > 0:
   echo "Dzie zaczniemy nasze poszukiwania? Nietstety z racji tego, że Kari nie rusza się za daleko z domu, masz do wyboru tylko kilka lokacji"
   sleep(3000)
   echo "Co kcesz odwiedzić jako pierwsze?"
+  sleep(1000)
   echo "Domena Kari, Balkon Siemianowickich Horrorów, Piwniczne Mokradła, Przedblocze"
   sleep(2000)
   var giereczkowacz = readLine(stdin)

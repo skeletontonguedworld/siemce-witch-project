@@ -15,7 +15,7 @@ proc blcksls_przedblocze*() =
 
   if przedblokarz == "Spierdalaj" or przedblokarz.contains("odej"):
     echo "Uciekasz jak najszybciej, nie będziesz przecież rozmawiać ze starymi plotkarami"
-    sleep(3000)
+    sleep(2000)
     echo "Widzisz jednak, że stara kobieta mamrocze coś pod nosem i w momencie doznajesz dziwnego uczucia wiercenia w głowie i dreszczy"
     hp -= 37
     sleep(3000)
