@@ -61,15 +61,15 @@ proc blcksls_piwnica*() =
             sleep(4000)
             echo "TAKIEGO GŁOSU SPOŁECZEŃSTWA POTRZEBUJEMY, JEDYNY POLITYK, KTÓRY NIE PIERDOLI GŁUPOT, powiedziała pani Mariola z bloku 8A"
             sleep(3000)
-            echo "NIGDY NIE MIAŁAM LEPSZEGO WSPÓŁPRACOWNIKA, NIE TWORZY ŻADNYCH KONFLIKÓW I MA GENIALNE POMYSŁ, podkreśla pani Basia z Urzędu Miasta"
+            echo "NIGDY NIE MIAŁAM LEPSZEGO WSPÓŁPRACOWNIKA, NIE TWORZY ŻADNYCH KONFLIKÓW I MA GENIALNE POMYSŁY, podkreśla pani Basia z Urzędu Miasta"
             sleep(3000)
             echo "Nie mija miesiąc, a woda w piwnicy pozostaje smutnym wspomnieniem starych czasów"
             sleep(2000)
             echo "W krótkim czasie szczur zostaje prezydentem Siemc i zmienia nazwę na Szczurowice"
             sleep(2000)
             echo "Wszystko było fajen, nikt nie narzekał, w końcu nastał czas dobrobytu w Sie... a przepraszam, Szczurowicach Szczurskich!"
-            eq.delete(eq.find("członkostwo SSM")) # tu się wyjebuje i sobie mordę rozwala
-            eq.delete(eq.find("klomtwam Michałkowic"))
+            eq.delete(eq.find("członkostwo SSM")) 
+            eq.delete(eq.find("klomtwam Michałkowic"))           
             blcksls_domena()
           else:
             echo "Hm, szczerze nie masz pojęcia, co możesz na to zrobić, maila do spółdzielni może napisać?"
