@@ -1,6 +1,8 @@
 import os
 import std/strutils
 import blcksls_zmienne
+import std/random
+randomize()
 
 proc blcksls_balkon*() =
 
@@ -20,7 +22,7 @@ proc blcksls_balkon*() =
       echo "Lekko przypalona macka się odsuwa, lecz niestety, udaje jej się zrobić Ci dwie wampirze ranki na łokciu"
       sleep(3000)
       echo "Odnosisz lekkie obrażenia"
-      hp -= 21
+      hp -= rand(10..21)
       echo "Twoje zdrówko to teraz: " & $hp
     elif balkoniarz2.contains("ęka"):
       echo "Machasz ręką jak pojebion i próbujesz odgonić mackę. Nix Ci nie będzie przeszkadzać na Twoim balkonie"
@@ -37,18 +39,18 @@ proc blcksls_balkon*() =
         echo "Siemianowicie Horrory nie sądziły, że zostaną pokonane siłą przyjaźni międzygatunkowej, ale chyba się udało, nie widzisz ich w pobliżu"
         sleep(3000)
         echo "Zbijasz piątkę z pajunkiem, czujesz się fantastycznie i dopalasz spokojnie fajeczkę"
-        hp += 21
+        hp += rand(21..37)
         echo "Od razu lepij. Twoje zdrówko to teraz: " & $hp
         sleep(2000)
         echo "Przypomniasz sobie, że palenie nie jest jednak zdrowe i nie powinnaś się tak czuć"
-        hp -= 10
+        hp -= rand(10..15)
         eq.add("przyjaźń międzygatunkowa")
       elif balkoniarz3.contains("ie"):
         echo "A po co Ci pomoc jakiegoś pajunka, napierdalasz sama macki łapami, ale nie przynosi to wielkiego efektu"
         sleep(3000)
         echo "Macka uderza Cię w głowę, ostatkiem sił wracasz do mieszkania"
         sleep(2000)
-        hp -= 66
+        hp -= rand(50..66)
         echo "Leżysz chwilę na podłodze, nie masz siły, nie wiesz czemu, ale na ścianie wyświetla Ci się napis TWOJE ZDROWIE DRASTYCZNIE SPADA, WYNOSI TERAZ: " & $hp
       else:
         echo "Dobra, to nie ma sensu, jak cały ten kod"
@@ -62,7 +64,7 @@ proc blcksls_balkon*() =
           hp -= 10
         else:
           echo "Niestety nie udało Ci się zrobić uniku w czas, dostajesz kolcami w głowę, ciesz się, że tą gładką stroną, chociaż uderzenie nadal boli"
-          hp -= 70
+          hp -= rand(50..70)
     else: 
         echo "Jak Ty nie kcesz walczyć, to po co walkę wybrałaś, hęęęęę?"    
   else:

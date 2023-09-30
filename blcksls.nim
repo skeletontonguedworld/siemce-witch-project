@@ -5,6 +5,7 @@ import blcksls_balkon
 import blcksls_domena
 import blcksls_piwnica
 import blcksls_przedblocze
+import blcksls_targowisko
 
 while hp > 0:
 
@@ -26,6 +27,7 @@ while hp > 0:
     of "Piwniczne Mokradła": jesteśtu = Lokacje.Piwniczne_Mokradła
     of "Przedblocze": jesteśtu = Lokacje.Przedblocze
     of "Domena Kari": jesteśtu = Lokacje.Domena_Kari
+    of "Płazowe Targowisko Papirosków": jesteśtu = Lokacje.Płazowe_Targowisko_Papirosków
 
   echo "Jesteś w: " & $jesteśtu
   
@@ -34,6 +36,7 @@ while hp > 0:
     of Lokacje.Piwniczne_Mokradła: blcksls_piwnica() 
     of Lokacje.Przedblocze: blcksls_przedblocze()
     of Lokacje.Domena_Kari: blcksls_domena()
+    of Lokacje.Płazowe_Targowisko_Papirosków: blcksls_targowisko()
       
 echo "Finalnie Twoje zdrówko wynosi: " & $hp & " a w Twoim ekwipuneczku jest: " 
 sleep(2000)

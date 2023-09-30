@@ -2,7 +2,7 @@ import os
 import std/strutils
 import blcksls_zmienne
 import blcksls_piwnica
-import blcksls_domena
+import blcksls_targowisko
 
 proc blcksls_przedblocze*() =
 
@@ -31,8 +31,8 @@ proc blcksls_przedblocze*() =
       echo "Szczur prowadzi Cię do piwnicy"
       blcksls_piwnica()
     else:
-      echo "Dobra, nigdzie nie idziesz, nie masz siły, wracasz do domu" 
-      blcksls_domena()
+      echo "Dobra, nie masz siły na jakieś bzdury, ale jak już wyszłaś z domu, to możesz iść po papiroski" 
+      blcksls_targowisko()
   elif przedblokarz.contains("odp"):
     echo "Opowiadasz kobiecie. Chociaż wypytuje strasznie, to starasz się być miła, jednak dość szybko kończysz rozmowę, bo nie masz czasu na pierdoły"
     sleep(3000)
@@ -42,3 +42,8 @@ proc blcksls_przedblocze*() =
     sleep(3000)
     hp += 666
     echo "Twoje zdrówko to teraz: " & $hp
+    sleep(1000)
+    echo "A jak już wyszłaś z domu, to może pójdziesz po fajurki"
+    blcksls_targowisko()
+  else:
+    echo "Coś średnia ta odpowiedź, nie?"  
