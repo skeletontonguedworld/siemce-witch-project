@@ -7,13 +7,13 @@ import blcksls_targowisko
 proc blcksls_przedblocze*() =
 
   echo "Postanawiasz wyjść z domu, wychodzisz z klatki, niestety na ławce siedzi sąsiadka, która zaczyna zagadywać" 
-  sleep(3000) 
+  sleep(2000) 
   echo "DZIOŁCHA, JO ŻECH CIĘ TU NIE WIDZIOŁA WCZECZEŚNIEJ! SKOMT JESTEŚ?" # nope, nadal nie umiem Śluskiego, nie będę nawet udawać XD
-  sleep(3000)
+  sleep(2000)
   echo "Musisz myśleć szybko, co kcesz zrobić, odejść i robić swoje, czy odpowiedzieć?"
   var przedblokarz = readLine(stdin)
 
-  if przedblokarz == "Spierdalaj" or przedblokarz.contains("odej"):
+  if przedblokarz == "Spierdalaj" or przedblokarz.contains("odej") or przedblokarz.contains("odch"):
     echo "Uciekasz jak najszybciej, nie będziesz przecież rozmawiać ze starymi plotkarami"
     sleep(2000)
     echo "Widzisz jednak, że stara kobieta mamrocze coś pod nosem i w momencie doznajesz dziwnego uczucia wiercenia w głowie i dreszczy"

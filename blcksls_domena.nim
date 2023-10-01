@@ -9,14 +9,14 @@ proc blcksls_domena*() =
   echo "Co robisz, otwierasz drzwi?"
   var domowczarz = readLine(stdin)
 
-  if domowczarz.contains("tak"):
+  if domowczarz.contains("ak"):
     echo "Jesteś poważną, dorosłą osobą, więc myślę, że dasz radę, patrzysz kto to i otwierasz drzwi"
     sleep(3000)
     echo "Znów ktoś przylazł po pinionszki, o panie, mogłaś nie otwierać, teraz Ci głupio strasznie, ale musisz to powiedzieć"
     sleep(3000)
     echo "PANI KIERWA, PRZY MOJEJ WYPŁACIE, TO JA JESTEM BIEDNA I NA MNIE TRZEBA ZBIERAĆ, SAMA ZACZNĘ NIEDŁUGO PO BLOKACH CHODZIĆ"
     sleep(3000)
-    echo "Typiara odchodzi smutna, a Tobie nadal jakos głupio"
+    echo "Typiara odchodzi smutna, a Tobie nadal jakoś głupio"
     sleep(3000)
     eq.add("wizyta1")
     hp -= 21
@@ -29,7 +29,7 @@ proc blcksls_domena*() =
   echo "Czy tym razem otworzysz?"
   var domowczarz2 = readLine(stdin)
 
-  if domowczarz2.contains("tak"):
+  if domowczarz2.contains("ak"):
     echo "Patrzysz, kto to jest i otwierasz drzwi, poczta"
     sleep(3000)
     echo "Babeczka pyta, czy to Adrian Jakiśtam, myślisz CZY JA KIERWA WYGLĄDAM NA ADRIANA, ale starasz się być miła i tłumaczysz, babeczka odchodzi" # ty by można kolejne ify robić z byciem miłym i nie, ale idk
@@ -42,12 +42,13 @@ proc blcksls_domena*() =
   echo "Nie zdążyłaś odejść od drzwi, a tu trzeci dzwonek, kurwa ja pierdolę. Czy teraz otworzysz?"
   var domowczarz3 = readLine(stdin)
 
-  if domowczarz3.contains("tak"):
+  if domowczarz3.contains("ak"):
     echo "Otwierasz, a tam typo z DZIEM DOBRY, JA OD ODCZYTU PODZIELNIKÓW, masz ochotę powiedzieć, że masz dopiero 30 latek i nikogo dorosłego nie ma w domu, ale no, chyba musisz wpuścić typa"
     sleep(5000)
     hp += 21
     eq.add("wizyta3")
     echo "Typo ze przeszedł, zrobił odczyt, poszedł, w sumie poszło bez problemu, czujesz ulgę, że sie udało i jakoś Ci lepiej, Twoje zdrówko to: " & $hp
+    sleep(3000)
   else:
     echo "Nie no kierwa, ileż można, nie otwierasz"
     

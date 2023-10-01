@@ -17,9 +17,8 @@ while hp > 0:
   echo "Dzie zaczniemy nasze poszukiwania? Nietstety z racji tego, że Kari nie rusza się za daleko z domu, masz do wyboru tylko kilka lokacji"
   sleep(3000)
   echo "Co kcesz odwiedzić jako pierwsze?"
-  sleep(1000)
-  echo "Domena Kari, Balkon Siemianowickich Horrorów, Piwniczne Mokradła, Przedblocze"
   sleep(2000)
+  echo "Domena Kari, Balkon Siemianowickich Horrorów, Piwniczne Mokradła, Przedblocze"
   var giereczkowacz = readLine(stdin)
 
   case giereczkowacz:
@@ -29,7 +28,9 @@ while hp > 0:
     of "Domena Kari": jesteśtu = Lokacje.Domena_Kari
     of "Płazowe Targowisko Papirosków": jesteśtu = Lokacje.Płazowe_Targowisko_Papirosków
 
+  sleep(1000)
   echo "Jesteś w: " & $jesteśtu
+  sleep(1000)
   
   case jesteśtu:
     of Lokacje.Balkon_Siemianowickch_Horrorów: blcksls_balkon()
@@ -37,7 +38,8 @@ while hp > 0:
     of Lokacje.Przedblocze: blcksls_przedblocze()
     of Lokacje.Domena_Kari: blcksls_domena()
     of Lokacje.Płazowe_Targowisko_Papirosków: blcksls_targowisko()
-      
+
+sleep(2000)      
 echo "Finalnie Twoje zdrówko wynosi: " & $hp & " a w Twoim ekwipuneczku jest: " 
 sleep(2000)
 for rzeczyfinal in eq:                                                           
@@ -45,6 +47,8 @@ for rzeczyfinal in eq:
 sleep(2000)
 
 if eq.contains("sens żyćka"):
+  sleep(2000)
   echo "Brawo, udało Ci się odnaleźć sens żyćka, może trochę późno, ale zawsze cuś"
 else:
+  sleep(2000)
   echo "Nietstety, coś nam nie poszło, ale możesz spróbować ponownie!"  

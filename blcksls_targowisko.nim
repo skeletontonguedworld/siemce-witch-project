@@ -23,6 +23,7 @@ proc blcksls_targowisko*() =
     hp += 6
     eq.add("szacunek ludzi ulicy")
     echo "Zaczynasz czuć się znacznie lepij, Twoje zdrówko urosło i wynosi teraz: " & $hp & " a do tego zyskujesz"
+    sleep(1000)
     for rzecz in eq:
       echo rzecz
   else:
@@ -36,12 +37,12 @@ proc blcksls_targowisko*() =
     hp -= 6
 
   echo "Idziesz dalej i zauważasz grupę Sebixów, trochę się boisz, ale z drugiej strony nigdy nix złego Ci się w Siemcach nie stało"
-  sleep(2000)
+  sleep(3000)
   if eq.contains("szacunek ludzi ulicy"):
     echo "A dobra, co Ci szkodzi, kiedy przechodzisz koło nich, jeden z dresów mówi:"
     sleep(2000)
     echo "EJ MORDO, MORDO, CZEKEJ!"
-    sleep(1000)
+    sleep(2000)
     echo "Nie jesteś pewna, co masz zrobić, może odwrócisz się i zapytasz, o co chodzi?"
     let płazowicz2 = readLine(stdin)
     if płazowicz2.contains("ak"):
@@ -58,6 +59,7 @@ proc blcksls_targowisko*() =
       echo "W stresie się uśmiechasz i przybijasz piątkę w wyciągniętą dłoń Sebixa"
       sleep(2000)
       echo "W zasadzie wszystko dobrze się ułożyło, nie ma co narzekać"
+      sleep(2000)
       eq.add("z sebixową mocą")
     else:
       echo "Postanawiasz nie ryzykować, może to się skończyć źle"  
@@ -101,9 +103,22 @@ proc blcksls_targowisko*() =
     sleep(2000)
     echo "Dobra, czas wrócić do domu!"
     blcksls_domena()
+  elif eq.contains("przyjaźń międzygatunkowa"):
+    echo "Nagle słyszysz jakieś dziwne odgłosy przed Płazosklepem, wychodzisz sprawdzić co to"
+    sleep(2000)
+    echo "Koło śmietnika stoi pokaźnych rozmiarów pajunk, mruga do Ciebie i zauważasz, że między odnóżami trzyma... Twoją kartę"
+    sleep(3000)
+    echo "Pajunk rzuca Ci kartę, głaskasz go i mówisz GOOD BOI"
+    sleep(2000)
+    echo "Kupujesz fajeczki, wychodzisz przed sklep, pajunk nadal na Ciebie czeka"
+    sleep(2000)
+    echo "Kiedy wracasz do domu, widzisz, że podąża za Tobą zadowolony z siebie"
+    sleep(2000)
+    blcksls_domena()
   else: 
-    echo "Kierwa, ale przyps, przeprasza po cichu i uciekasz do domu"  
+    echo "Kierwa, ale przyps, przepraszasz po cichu i uciekasz do domu"  
     sleep(2000)
     echo "Zdecydowanie starczy Ci na dziś"
     hp -= 10
     blcksls_domena()
+  

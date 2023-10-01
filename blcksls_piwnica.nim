@@ -10,11 +10,11 @@ proc blcksls_piwnica*() =
     echo "Wchodzisz do piwnicy za szczurem, jednak on rozpływa się dzieś w powietrzu"
     sleep(2000)
     echo "Ale jak już tu zeszłaś, to postanawiasz się chwilę rozejrzeć, klucze masz, więc może poszukasz przynajmniej swojej piwnicy"
-    sleep(3000)
+    sleep(2000)
     echo "Kiedy błądzisz chwilę po piwnicy, w poszukiwaniu swojej, zauważasz wielkie czerwone drzwi z napisem NIE WCHODZIĆ!!!!!!!!! Co robisz?"
     let przedniczak = readLine(stdin)
 
-    if przedniczak.contains("id"):
+    if przedniczak.contains("id") or przedniczak.contains("wcho"):
         echo "Ciągniesz za klamkę dla beczuni, bo nikt Ci nie będzie mówił, co masz robić *Rein - There Is No Authority But Yourself gra wolmo w tle*"
         sleep(3000)
         echo "Zaskakująco, drzwi są otwarte, myśzlisz, że na chuj ktoś daje kartki na drzwiach, jak po prostu mógł zamknąć, ale co kto lubi"
@@ -33,9 +33,9 @@ proc blcksls_piwnica*() =
           echo "Dobra, może zrobisz z siebie debila, ale to tylko szczur, postanawiasz go poprosić, czy mógłby zdjąć z Ciebie klątwę"
           sleep(3000)
           echo "Szczur wygląda jakby machał ze zrozumieniem ogonem, potem biegnie w jakąś kałużę w piwnicy i zaczyna piszczeć"
-          sleep(2000)
+          sleep(3000)
           echo "Chyba kce, żebyś podeszła, więc to robić, już nix dziwniejszego się nie stanie"
-          sleep(1000)
+          sleep(2000)
           echo "Podchodzisz i tak z lekka jebie wilgocią, szczur pokazuje na Twoje przemoczone buty i wodę, chyba się domyślasz, o co chodzi"
           sleep(3000)
           echo "Co, szczurku, chcesz, żeby SSM w końcu zajęło się sprawą zalanej piwnicy?"
@@ -66,8 +66,9 @@ proc blcksls_piwnica*() =
             echo "Nie mija miesiąc, a woda w piwnicy pozostaje smutnym wspomnieniem starych czasów"
             sleep(2000)
             echo "W krótkim czasie szczur zostaje prezydentem Siemc i zmienia nazwę na Szczurowice"
-            sleep(2000)
+            sleep(3000)
             echo "Wszystko było fajen, nikt nie narzekał, w końcu nastał czas dobrobytu w Sie... a przepraszam, Szczurowicach Szczurskich!"
+            sleep(2000)
             eq.delete(eq.find("członkostwo SSM")) 
             eq.delete(eq.find("klomtwam Michałkowic"))           
             blcksls_domena()
@@ -84,7 +85,7 @@ proc blcksls_piwnica*() =
           echo "Nie, jeszcze aż tak Cię nie pojebało, żeby rozmawiać ze szczurem, postanawiasz o tym zapomnieć, wrócić do domu i zapalić, za dużo stresu"
           sleep(3000)
           blcksls_balkon() 
-    elif przedniczak.contains("nie"): 
+    elif przedniczak.contains("ie"): 
         echo "No po coś ta kartka wisi, nie wchodzisz, piwnicy tyż nie znalazłaś, nie wiem, jak wpadłaś na pomysł, żeby iść za szczurem" 
         sleep(3000)
         echo "Odchodzisz powoli i zaczynasz odczuwać pewien rodzaj zmęczenia"
@@ -99,7 +100,7 @@ proc blcksls_piwnica*() =
     echo "Zjeżdżasz windą, schodzisz kawałek po schodach i widzisz wodę stojącą w piwnicy, ZNÓW, pewnie po ostatnich deszczach, co robisz? Kcesz tam iść czy kurwować na SSM?"
     var piwniczak = readLine(stdin)
 
-    if piwniczak == "Kurwuję na SSM" or piwniczak.contains("SSM"):
+    if piwniczak == "Kurwuję na SSM" or piwniczak.contains("SSM") or piwniczak.contains("urw"):
       echo "Nagle za Tobą pojawia sie sąsiad i mówi *O PANI, DOKŁADNIE TAK, PŁACIMY TYLE PINIENDZY ZA CZYNSZ, A POTEM PIWNICA PO KAŻDYM DESZCZU ZALANA, W TYM KRAJU NIC, TYLKO BY PINIONSZKI BRALI*"
       sleep(3000)
       echo "Odpowiadasz *NO DOKŁADNIE, SYNKI SPRYTNE, A ROBIĆ NI MA KOMU, TRZEBA TO ZMIENIĆ*"
@@ -110,7 +111,7 @@ proc blcksls_piwnica*() =
       eq.add("członkostwo SSM")
       for rzeczy in eq:
           echo rzeczy   
-    elif piwniczak == "Kurwa idę" or piwniczak.contains("id"):
+    elif piwniczak == "Kurwa idę" or piwniczak.contains("id") or piwniczak.contains("chod"):
       echo "Wchodzisz do piwnicy i czujesz, że mógł to być błąd, czujesz wodę w butach, ale jak i tak są mokre, to postanawiasz iść dalij"
       sleep(2000)
       hp -= 6
@@ -119,7 +120,7 @@ proc blcksls_piwnica*() =
       echo "Kiedy błądzisz chwilę po piwnicy, w poszukiwaniu swojej, zauważasz wielkie czerwone drzwi z napisem NIE WCHODZIĆ!!!!!!!!! Co robisz?"
       var piwniczak2 = readLine(stdin)
 
-      if piwniczak2.contains("id"):
+      if piwniczak2.contains("id") or piwniczak2.contains("chod"):
           echo "Ciągniesz za klamkę dla beczuni, bo nikt Ci nie będzie mówił, co masz robić *Rein - There Is No Authority But Yourself gra wolmo w tle*"
           sleep(3000)
           echo "Zaskakująco, drzwi są otwarte, myśzlisz, że na chuj ktoś daje kartki na drzwiach, jak po prostu mógł zamknąć, ale co kto lubi"
@@ -144,7 +145,7 @@ proc blcksls_piwnica*() =
             sleep(3000)
             hp -= 420
             echo "Twoje zdrówko to teraz: " & $hp & " i powinnaś nie żyć, ale do takiego poziomu programowania nie doszłam, bo się zgubię w pętelkach"
-          elif piwniczak3.contains("nic"):
+          elif piwniczak3.contains("ic"):
             echo "Postanawiasz nie robić nic, szczur patrzy na Ciebie z ufością i zaczna się zbliżać"
             sleep(3000)
             echo "Uznajesz, że elo, jakby kciał Cię zabić, to by już zabił, więc wyciągasz rękę i też podchodzisz coraz bliżej"
@@ -166,19 +167,22 @@ proc blcksls_piwnica*() =
             echo "Dobru, jak kcesz, nadal Ci dziękuję, chociaż widzę, że odrzucasz prawdziwą piwniczną miłość"
             sleep(3000)
             echo "Typo wkłada Ci coś w dłoń i odchodzi"
+            sleep(2000)
             eq.add("sens żyćka")
             eq.add("naszyjnik z małym ściurem")
             for piwnicznerzeczy in eq:
                 echo piwnicznerzeczy
+            sleep(2000)    
             echo "Otwierasz dłon i widzisz na niej naszyjnik z małym szczurkiem i karteczkę, czytasz, cu jest na niej napisane"
             sleep(3000)
             echo "SENSEM ŻYĆKA JEST BYĆ DOBRYM CZŁOWIEKIEM, MIEĆ EMPATIĘ I ZROZUMIENIE I ZAWSZE BRONIĆ SŁABSZYCH"
             sleep(3000)
             echo "Uśmiechasz się, patrząc za kurzem, ktróry tańczy w lekkim świetle piwncy i czujesz dziwne spełnienie, ogarniające Twoje ciało"
+            sleep(2000)
           else:
             echo "Niii, weź na pytanie odpowiedz, cu Ty robisz ;_;"
 
-      elif piwniczak2.contains("nie"): 
+      elif piwniczak2.contains("ie"): 
           echo "No po coś ta kartka wisi, nie wchodzisz, piwnicy tyż nie znalazłaś, więc zmęczona i z wodą w butach po prostu odchodzisz" 
           sleep(3000)
           hp -= 21
